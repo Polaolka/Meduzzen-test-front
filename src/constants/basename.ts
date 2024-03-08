@@ -1,4 +1,4 @@
-// const BASENAME = "/Meduzzen-test";
-const BASENAME = "/";
+const BASENAME = "/Meduzzen-test-front";
+// const BASENAME = "/";
 
 export default BASENAME;
