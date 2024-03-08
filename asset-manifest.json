@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Meduzzen-test-front/static/css/main.bb0db342.css",
-    "main.js": "/Meduzzen-test-front/static/js/main.3630789b.js",
+    "main.js": "/Meduzzen-test-front/static/js/main.1edff5df.js",
     "static/js/544.7194f3f6.chunk.js": "/Meduzzen-test-front/static/js/544.7194f3f6.chunk.js",
     "static/js/449.6389edcf.chunk.js": "/Meduzzen-test-front/static/js/449.6389edcf.chunk.js",
     "static/js/453.0a2ed075.chunk.js": "/Meduzzen-test-front/static/js/453.0a2ed075.chunk.js",
@@ -9,7 +9,7 @@
     "static/media/logo.svg": "/Meduzzen-test-front/static/media/logo.c6c5cb35dcd71eee0dcdffdc8dae9013.svg",
     "index.html": "/Meduzzen-test-front/index.html",
     "main.bb0db342.css.map": "/Meduzzen-test-front/static/css/main.bb0db342.css.map",
-    "main.3630789b.js.map": "/Meduzzen-test-front/static/js/main.3630789b.js.map",
+    "main.1edff5df.js.map": "/Meduzzen-test-front/static/js/main.1edff5df.js.map",
     "544.7194f3f6.chunk.js.map": "/Meduzzen-test-front/static/js/544.7194f3f6.chunk.js.map",
     "449.6389edcf.chunk.js.map": "/Meduzzen-test-front/static/js/449.6389edcf.chunk.js.map",
     "453.0a2ed075.chunk.js.map": "/Meduzzen-test-front/static/js/453.0a2ed075.chunk.js.map",
@@ -17,6 +17,6 @@
   },
   "entrypoints": [
     "static/css/main.bb0db342.css",
-    "static/js/main.3630789b.js"
+    "static/js/main.1edff5df.js"
   ]
 }
