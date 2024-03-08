@@ -16,8 +16,9 @@ export const Caption = styled.p`
   &.sendMessage {
     margin-bottom: 4px;
   margin-right: 4px;
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 500;
+  color: ${colors.colorLightBorder}
   }
 `;
 

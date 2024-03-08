@@ -2,6 +2,7 @@
 import React, { lazy, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Route, Routes } from 'react-router-dom';
+import { Toaster } from "react-hot-toast";
 
 import { AppStyled } from './App.styled';
 import SharedLayout from '../SharedLayout/SharedLayout';
@@ -24,6 +25,7 @@ const App: React.FC = () => {
   }, [dispatch]);
 
   return (
+    <>
     <AppStyled>
       <Routes>
         <Route path="/" element={<SharedLayout />}>
@@ -36,6 +38,21 @@ const App: React.FC = () => {
         </Route>
       </Routes>
     </AppStyled>
+          <Toaster
+          position="top-center"
+          reverseOrder={false}
+          gutter={8}
+          containerClassName=""
+          containerStyle={{}}
+          toastOptions={{
+            duration: 4000,
+            style: {
+              background: "#fff",
+              color: "#363636",
+            },
+          }}
+        />
+        </>
   );
 };
 

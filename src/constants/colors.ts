@@ -5,6 +5,7 @@ export const colors = Object.freeze({
     colorText: "#121417",
     colorLightOrange: "#fbe9ba",
     colorLightBG: "#f8f8f8",
+    colorLightBorder: "#b8c9c8",
     colorLightBlue: "#5cd2e4",
     colorLightRed: "#f27384",
     colorLigthText: "#8A8A89",

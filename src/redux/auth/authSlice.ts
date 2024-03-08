@@ -6,6 +6,7 @@ import {
   currentUser,
   refreshUser
 } from "./authOperations";
+import toast from 'react-hot-toast';
 
 
 interface IAuthState {
@@ -41,8 +42,8 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(registerUser.rejected, (state, { payload }: PayloadAction<AsyncThunkPayload<typeof registerUser> | undefined>) => {
-        // payload тепер може бути undefined, робимо перевірку
         state.error = payload ? String(payload) : null;
+        toast.error(`error: ${payload}`);
       })
       .addCase(logInUser.fulfilled, (state, { payload }: PayloadAction<AsyncThunkPayload<typeof logInUser>>) => {
         const { name, email, id } = payload;
@@ -54,6 +55,7 @@ const authSlice = createSlice({
       })
       .addCase(logInUser.rejected, (state, { payload }: PayloadAction<AsyncThunkPayload<typeof logInUser> | undefined>) => {
         state.error = payload ? String(payload) : null;
+        toast.error(`error: ${payload}`);
       })
       .addCase(refreshUser.fulfilled, (state, { payload }: PayloadAction<AsyncThunkPayload<typeof refreshUser>>) => {
         console.log("payload:", payload);
@@ -78,6 +80,7 @@ const authSlice = createSlice({
         state.name = null;
         state.email = null;
         state.isAuth = false;
+        // toast.error(`error: ${payload}`);
       })
       .addCase(currentUser.fulfilled, (state, { payload }: PayloadAction<AsyncThunkPayload<typeof currentUser>>) => {
         const { name, email, id } = payload;

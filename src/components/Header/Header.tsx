@@ -14,7 +14,6 @@ import Container from "../Container/Container";
 
 import { RegisterForm } from "../RegisterForm/RegisterForm";
 import Modal from "../Modal/Modal";
-import { selectUserName } from "../../redux/auth/selectors";
 import { logOut } from "../../redux/auth/authOperations";
 import LoginForm from "../LoginForm/LoginForm";
 import RootState from "../../redux/RootState";
@@ -23,7 +22,7 @@ import Logo from "../Logo/Logo";
 
 function Header() {
   const dispatch = useDispatch<ThunkDispatch<{}, {}, UnknownAction>>();
-  const login = useSelector(selectUserName);
+  const login = useSelector((state: RootState) => state.auth.name);
   const [isLoginModalOpened, setIsLoginModalOpened] = useState(false);
   const [isRegModalOpened, setIsRegModalOpened] = useState(false);
   const isAuth = useSelector((state: RootState) => state.auth.isAuth);

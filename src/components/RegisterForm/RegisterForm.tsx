@@ -15,8 +15,8 @@ import { Button } from "../Styled";
 import { IRegisterUserDTO, registerUser } from "../../redux/auth/authOperations";
 import Message from "../Message/Message";
 import ShowPassword from "../ShowPassword/ShowPassword";
-import { selectError } from "../../redux/auth/selectors";
 import { ThunkDispatch, UnknownAction } from "@reduxjs/toolkit";
+import RootState from "../../redux/RootState";
 interface LoginFormProps {
   setIsRegModalOpened: React.Dispatch<React.SetStateAction<boolean>>;
 }
@@ -38,8 +38,10 @@ export const RegisterForm: React.FC<LoginFormProps> = ({ setIsRegModalOpened }) 
     email: yup.string().min(6).max(100).required(),
     password: yup.string().min(4).max(100).required(),
   });
+  
+  const message = useSelector((state: RootState) => state.auth.error);
+  console.log("message:", message);
 
-  const message = useSelector(selectError);
 
   const onClickHandler = () => {
     setPasswordShown((state) => !state);

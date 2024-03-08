@@ -6,5 +6,5 @@ export const UsersStyled = styled.div`
   align-items: center;
   display: flex;
   flex-direction: column;
-  gap: 32px;
+  gap: 12px;
 `;

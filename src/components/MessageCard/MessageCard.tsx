@@ -11,6 +11,8 @@ import {
   MessageContentBox,
   MessageImgsWrapper,
   MessageImgThumb,
+  ButtonBox,
+  MessageSenderName,
 } from "./MessageCard.styled";
 import { Button } from "../Styled/index";
 import RootState from "../../redux/RootState";
@@ -64,7 +66,7 @@ const MessageCard: React.FC<{ Message: IMessage }> = ({ Message }) => {
           ) : (
             <MessagesContent>{content}</MessagesContent>
           )}
-          <p>{senderName}</p>
+          <MessageSenderName>Author: {senderName}</MessageSenderName>
         </MessageContentBox>
         {isLoading ? (
           <Loader />
@@ -81,7 +83,7 @@ const MessageCard: React.FC<{ Message: IMessage }> = ({ Message }) => {
             )}
           </MessageImgsWrapper>
         )}
-        <MessageContentBox>
+        <ButtonBox>
           {isEditing ? (
             <Button onClick={saveEditHandle} className="saveBtn">
               Save
@@ -94,7 +96,7 @@ const MessageCard: React.FC<{ Message: IMessage }> = ({ Message }) => {
           <Button onClick={deleteMessageHandle} className="deleteBtn">
             Delete
           </Button>
-        </MessageContentBox>
+        </ButtonBox>
       </InfoMessageWrapper>
     </MessageCardStyled>
   );

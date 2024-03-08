@@ -7,7 +7,7 @@ import { transition } from "../../helpers/mixins";
 
 export const MessageCardStyled = styled.div`
   position: relative;
-  width: 100%;
+  width: fit-content;
   padding: 12px;
 
   display: flex;
@@ -17,34 +17,34 @@ export const MessageCardStyled = styled.div`
 
   justify-content: space-between;
 
-  border-radius: 24px;
+  border-radius: 12px;
+  border: 1px solid ${colors.colorLightBorder};
   background: ${colors.colorWhite};
 
   @media screen and (min-width: ${mediaSizes.tablet}) {
     justify-content: space-between;
-    flex-wrap: nowrap;
     padding: 12px;
-    gap: 30px;
+    gap: 12px;
   }
 
   @media screen and (min-width: ${mediaSizes.desktop}) {
     justify-content: space-between;
     padding: 16px;
-    gap: 40px;
+    gap: 16px;
   }
 `;
 
 export const MessageImgsWrapper = styled.div`
-  height: 150px;
+  width: 300px;
   gap: 10px;
   display: flex;
   align-items: start;
-  justify-content: center;
+  justify-content: start;
 `;
 
 export const MessageImgThumb = styled.div`
-  width: 120px;
-  height: 120px;
+  width: 92px;
+  height: 92px;
 
   display: flex;
   align-items: center;
@@ -63,8 +63,9 @@ export const MessageImg = styled.img`
 `;
 
 export const InfoMessageWrapper = styled.div`
-display: flex;
-gap: 8px;
+flex-wrap: wrap;
+  display: flex;
+  gap: 8px;
 `;
 
 export const InfoMessageList = styled.div`
@@ -88,19 +89,29 @@ export const HeartLineStyled = styled(HiOutlineHeart)`
 `;
 
 export const MessageContentBox = styled.div`
+  width: 300px;
   display: flex;
   justify-content: start;
   flex-direction: column;
   gap: 8px;
-  & p {
-    color: ${colors.colorLigthText};
-    margin: 0;
-  }
 `;
 
-export const MessagesContent = styled.h3`
-  color: ${colors.colorText};
-  font-size: 24px;
+export const MessageSenderName = styled.p`
+  color: ${colors.colorLigthText};
+  margin: 0;
+`;
+
+export const ButtonBox = styled.div`
+  /* margin-left: auto; */
+  display: flex;
+  justify-content: start;
+  flex-direction: column;
+  gap: 8px;
+`;
+
+export const MessagesContent = styled.p`
+  color: ${colors.colorBlack};
+  font-size: 16px;
   font-weight: 500;
   line-height: 1;
 `;

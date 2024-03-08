@@ -4,8 +4,8 @@ import { colors } from "../../constants/index";
 import { transition } from "../../helpers/mixins";
 
 export const FooterStyled = styled.footer`
-  padding-top: 45px;
-  padding-bottom: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   position: relative;
 
   & ul {
@@ -27,7 +27,7 @@ export const FooterStyled = styled.footer`
     font-size: 14px;
     display: flex;
     align-items: center;
-    color: ${colors.colorGreen};
+    color: ${colors.colorLigthText};
 
     &:not(:last-child) {
       @media screen and (min-width: ${mediaSizes.tablet}) {
@@ -38,7 +38,7 @@ export const FooterStyled = styled.footer`
   }
 
   & .name {
-    color: ${colors.colorOrange};
+    color: ${colors.colorGreen};
     cursor: pointer;
     font-weight: 500;
     ${transition("color")}
