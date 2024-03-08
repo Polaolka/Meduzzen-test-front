@@ -6,7 +6,7 @@ import { ErrorResponse } from "react-router-dom";
 // const BASE_URL = "http://localhost:4000/api/v0/";
 const REACT_APP_BASE_URL = process.env.REACT_APP_BASE_URL;
 
-const BASE_URL = REACT_APP_BASE_URL || "http://localhost:4000/api/v0/";
+const BASE_URL = REACT_APP_BASE_URL || "https://meduzzen-test-back.onrender.com/api/v0/";
 
 export interface ILoginUserDTO {
   email: string; 
