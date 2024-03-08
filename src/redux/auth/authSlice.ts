@@ -54,11 +54,13 @@ const authSlice = createSlice({
         state.error = null;
       })
       .addCase(logInUser.rejected, (state, { payload }: PayloadAction<AsyncThunkPayload<typeof logInUser> | undefined>) => {
-        state.error = payload ? String(payload) : null;
+        state.id = null;
+        state.name = null;
+        state.email = null;
+        state.isAuth = false;
         toast.error(`error: ${payload}`);
       })
       .addCase(refreshUser.fulfilled, (state, { payload }: PayloadAction<AsyncThunkPayload<typeof refreshUser>>) => {
-        console.log("payload:", payload);
         const { name, email, id } = payload;
         state.id = id;
         state.name = name;
@@ -68,6 +70,10 @@ const authSlice = createSlice({
       })
       .addCase(refreshUser.rejected, (state, { payload }: PayloadAction<AsyncThunkPayload<typeof refreshUser> | undefined>) => {
         state.error = payload ? String(payload) : null;
+        state.id = null;
+        state.name = null;
+        state.email = null;
+        state.isAuth = false;
       })
       .addCase(logOut.fulfilled, (state) => {
         state.id = null;
